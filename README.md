@@ -1,5 +1,6 @@
 # Swarms
 ======
+
 Swarms is an innovative package that allows you to integrate various AI agents from platforms like OpenAI, Langchain, and others to work together as a team and automate tasks. With Swarms, you can create a powerful AI team that can handle complex tasks with ease.
 
 ## Features
