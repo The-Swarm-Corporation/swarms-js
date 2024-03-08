@@ -1,0 +1,68 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "globalDependencies": ["**/.env"],
+    "pipeline": {
+      "@langchain/scripts#build": {
+        "outputs": [
+          "./libs/langchain-scripts/dist/**",
+          "*.js",
+          "*.cjs",
+          "*.d.ts"
+        ]
+      },
+
+      "build": {
+        "dependsOn": [
+          "@langchain/scripts#build",
+          "@langchain/core#build",
+          "@langchain/community#build",
+          "^build"
+        ],
+        "outputs": ["dist/**", "dist-cjs/**", "*.js", "*.cjs", "*.d.ts"],
+        "inputs": ["src/**", "scripts/**", "package.json", "tsconfig.json"]
+      },
+      "lint": {
+        "outputs": []
+      },
+      "lint:fix": {
+        "outputs": [
+          "swarms/src/**/*.ts",
+          "libs/**/src/**/*.ts",
+          "docs/core_docs/**/*.js",
+          "examples/src/**/*.ts",
+          "**/*.eslintcache"
+        ],
+        "inputs": [
+          "swarms/src/**/*.ts",
+          "libs/**/src/**/*.ts",
+          "docs/core_docs/**/*.js",
+          "examples/src/**/*.ts"
+        ]
+      },
+      "format": {
+        "outputs": []
+      },
+      "format:check": {
+        "outputs": []
+      },
+      "test": {
+        "outputs": [],
+        "dependsOn": ["^build"]
+      },
+      "test:ci": {
+        "outputs": [],
+        "dependsOn": ["test"]
+      },
+      "test:integration": {
+        "outputs": [],
+        "dependsOn": ["^build"]
+      },
+      "precommit": {},
+      "start": {
+        "cache": false
+      },
+      "build:vercel": {
+        "dependsOn": ["^build:vercel"]
+      }
+    }
+  }

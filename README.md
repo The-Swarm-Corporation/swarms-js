@@ -27,19 +27,36 @@ npm install swarms
 
 Here is a basic example of how to use Swarms:
 
-```
-const swarms = require('swarms');
+```javascript
+const { ChatOpenAI, HumanMessage, SystemMessage } = require('@langchain/openai');
+const ConcurrentSwarm = require('swarms');
 
-// Initialize your swarm
-const mySwarm = swarms.create();
+// Initialize the chat model
+const chatModel = new ChatOpenAI({
+  openAIApiKey: "your-openai-api-key",
+});
 
-// Add agents to your swarm
-mySwarm.addAgent('openai', 'my-openai-agent');
-mySwarm.addAgent('langchain', 'my-langchain-agent');
+// Create a swarm with a maximum of 10 concurrent threads
+const swarm = new ConcurrentSwarm(10);
 
-// Use your swarm to automate tasks
-mySwarm.performTask('my-task');
-```
+// Define the OpenAI logic as a function
+async function openAiLogic() {
+  const messages = [
+    new SystemMessage("You're a helpful assistant"),
+    new HumanMessage("Create the code for a snake game in python"),
+  ];
+
+  const response = await chatModel.invoke(messages);
+  console.log(response);
+}
+
+// Add 40 agents to the swarm
+for (let i = 0; i < 40; i++) {
+  swarm.addAgent(openAiLogic);
+}
+
+// Perform the task
+swarm.performTask();
 
 
 Please refer to our [API documentation](https://domain.apac.ai/API.md) for more detailed usage instructions.
