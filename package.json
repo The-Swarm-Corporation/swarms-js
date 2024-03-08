@@ -46,6 +46,9 @@
     "typescript": "~5.1.6"
   },
   "dependencies": {
+    "@langchain/openai": "^0.0.18",
+    "langchain": "^0.1.25",
+    "swarms-js": "^0.0.3",
     "turbo": "latest",
     "winston": "^3.12.0"
   },

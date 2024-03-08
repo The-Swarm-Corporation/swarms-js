@@ -1,6 +1,6 @@
 # Swarms
 
-Swarms is an innovative package that allows you to integrate various AI agents from platforms like OpenAI, Langchain, and others to work together as a team and automate tasks. With Swarms, you can create a powerful AI team that can handle complex tasks with ease.
+Swarms is a package that allows you to integrate various AI agents from platforms like OpenAI, Langchain, and others to work together as a team and automate tasks. With Swarms, you can create powerful AI teams that can handle complex tasks with ease.
 
 ## Features
 --------
@@ -17,11 +17,11 @@ Swarms is an innovative package that allows you to integrate various AI agents f
 To install Swarms, you can use any of the following:
 
 
-`npm install swarms`
+`npm install swarms-js`
 
-`yarn add swarms`
+`yarn add swarms-js`
 
-`pnpm add swarms`
+`pnpm add swarms-js`
 
 
 
