@@ -34,7 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/semver", "npm:7.5.8"],\
             ["commander", "npm:11.1.0"],\
             ["dotenv", "npm:16.4.5"],\
-            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.1.25"],\
+            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.2.20"],\
             ["lint-staged", "npm:13.3.0"],\
             ["prettier", "npm:2.8.8"],\
             ["semver", "npm:7.6.0"],\
@@ -44,24 +44,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["winston", "npm:3.12.0"]\
           ],\
           "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@anthropic-ai/sdk", [\
-        ["npm:0.9.1", {\
-          "packageLocation": "./.yarn/cache/@anthropic-ai-sdk-npm-0.9.1-ed6a7af5a8-0ec50abc0f.zip/node_modules/@anthropic-ai/sdk/",\
-          "packageDependencies": [\
-            ["@anthropic-ai/sdk", "npm:0.9.1"],\
-            ["@types/node", "npm:18.19.22"],\
-            ["@types/node-fetch", "npm:2.6.11"],\
-            ["abort-controller", "npm:3.0.0"],\
-            ["agentkeepalive", "npm:4.5.0"],\
-            ["digest-fetch", "npm:1.3.0"],\
-            ["form-data-encoder", "npm:1.7.2"],\
-            ["formdata-node", "npm:4.4.1"],\
-            ["node-fetch", "virtual:3c17cf502be0c7c82b6287e023d783515ca6fa134646c9721142f96ed2c8f7ad52e36876ac623cabb40ce5d95bd9324fc68db55199c1a84d4dfcacce6cce8330#npm:2.7.0"],\
-            ["web-streams-polyfill", "npm:3.3.3"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["@babel/code-frame", [\
@@ -152,366 +134,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@langchain/community", [\
-        ["npm:0.0.35", {\
-          "packageLocation": "./.yarn/cache/@langchain-community-npm-0.0.35-3af7ab1070-a01e313b68.zip/node_modules/@langchain/community/",\
-          "packageDependencies": [\
-            ["@langchain/community", "npm:0.0.35"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:fd5518af93e01708abad64cb59f6795aa027aea67e646a1930dcdfd5cdb8bc7ef3d4a1f85dd1c9ee29e3dd87ee9c2a3fce3f4815038027363f7b1c41b696f4c9#npm:0.0.35", {\
-          "packageLocation": "./.yarn/__virtual__/@langchain-community-virtual-8bae97e309/0/cache/@langchain-community-npm-0.0.35-3af7ab1070-a01e313b68.zip/node_modules/@langchain/community/",\
-          "packageDependencies": [\
-            ["@langchain/community", "virtual:fd5518af93e01708abad64cb59f6795aa027aea67e646a1930dcdfd5cdb8bc7ef3d4a1f85dd1c9ee29e3dd87ee9c2a3fce3f4815038027363f7b1c41b696f4c9#npm:0.0.35"],\
-            ["@aws-crypto/sha256-js", null],\
-            ["@aws-sdk/client-bedrock-agent-runtime", null],\
-            ["@aws-sdk/client-bedrock-runtime", null],\
-            ["@aws-sdk/client-dynamodb", null],\
-            ["@aws-sdk/client-kendra", null],\
-            ["@aws-sdk/client-lambda", null],\
-            ["@aws-sdk/client-sagemaker-runtime", null],\
-            ["@aws-sdk/client-sfn", null],\
-            ["@aws-sdk/credential-provider-node", null],\
-            ["@azure/search-documents", null],\
-            ["@clickhouse/client", null],\
-            ["@cloudflare/ai", null],\
-            ["@datastax/astra-db-ts", null],\
-            ["@elastic/elasticsearch", null],\
-            ["@getmetal/metal-sdk", null],\
-            ["@getzep/zep-js", null],\
-            ["@gomomento/sdk", null],\
-            ["@gomomento/sdk-core", null],\
-            ["@google-ai/generativelanguage", null],\
-            ["@gradientai/nodejs-sdk", null],\
-            ["@huggingface/inference", null],\
-            ["@langchain/core", "npm:0.1.43"],\
-            ["@langchain/openai", "npm:0.0.18"],\
-            ["@mozilla/readability", null],\
-            ["@opensearch-project/opensearch", null],\
-            ["@pinecone-database/pinecone", null],\
-            ["@planetscale/database", null],\
-            ["@qdrant/js-client-rest", null],\
-            ["@raycast/api", null],\
-            ["@rockset/client", null],\
-            ["@smithy/eventstream-codec", null],\
-            ["@smithy/protocol-http", null],\
-            ["@smithy/signature-v4", null],\
-            ["@smithy/util-utf8", null],\
-            ["@supabase/postgrest-js", null],\
-            ["@supabase/supabase-js", null],\
-            ["@tensorflow-models/universal-sentence-encoder", null],\
-            ["@tensorflow/tfjs-converter", null],\
-            ["@tensorflow/tfjs-core", null],\
-            ["@types/aws-crypto__sha256-js", null],\
-            ["@types/aws-sdk__client-bedrock-agent-runtime", null],\
-            ["@types/aws-sdk__client-bedrock-runtime", null],\
-            ["@types/aws-sdk__client-dynamodb", null],\
-            ["@types/aws-sdk__client-kendra", null],\
-            ["@types/aws-sdk__client-lambda", null],\
-            ["@types/aws-sdk__client-sagemaker-runtime", null],\
-            ["@types/aws-sdk__client-sfn", null],\
-            ["@types/aws-sdk__credential-provider-node", null],\
-            ["@types/azure__search-documents", null],\
-            ["@types/better-sqlite3", null],\
-            ["@types/cassandra-driver", null],\
-            ["@types/chromadb", null],\
-            ["@types/clickhouse__client", null],\
-            ["@types/closevector-common", null],\
-            ["@types/closevector-node", null],\
-            ["@types/closevector-web", null],\
-            ["@types/cloudflare__ai", null],\
-            ["@types/cohere-ai", null],\
-            ["@types/convex", null],\
-            ["@types/datastax__astra-db-ts", null],\
-            ["@types/discord.js", null],\
-            ["@types/dria", null],\
-            ["@types/elastic__elasticsearch", null],\
-            ["@types/faiss-node", null],\
-            ["@types/firebase-admin", null],\
-            ["@types/getmetal__metal-sdk", null],\
-            ["@types/getzep__zep-js", null],\
-            ["@types/gomomento__sdk", null],\
-            ["@types/gomomento__sdk-core", null],\
-            ["@types/google-ai__generativelanguage", null],\
-            ["@types/google-auth-library", null],\
-            ["@types/googleapis", null],\
-            ["@types/gradientai__nodejs-sdk", null],\
-            ["@types/hnswlib-node", null],\
-            ["@types/html-to-text", null],\
-            ["@types/huggingface__inference", null],\
-            ["@types/ioredis", null],\
-            ["@types/jsdom", null],\
-            ["@types/llmonitor", null],\
-            ["@types/lodash", null],\
-            ["@types/lunary", null],\
-            ["@types/mongodb", null],\
-            ["@types/mozilla__readability", null],\
-            ["@types/mysql2", null],\
-            ["@types/neo4j-driver", null],\
-            ["@types/node-llama-cpp", null],\
-            ["@types/opensearch-project__opensearch", null],\
-            ["@types/pg", null],\
-            ["@types/pg-copy-streams", null],\
-            ["@types/pickleparser", null],\
-            ["@types/pinecone-database__pinecone", null],\
-            ["@types/planetscale__database", null],\
-            ["@types/portkey-ai", null],\
-            ["@types/qdrant__js-client-rest", null],\
-            ["@types/raycast__api", null],\
-            ["@types/redis", null],\
-            ["@types/replicate", null],\
-            ["@types/rockset__client", null],\
-            ["@types/smithy__eventstream-codec", null],\
-            ["@types/smithy__protocol-http", null],\
-            ["@types/smithy__signature-v4", null],\
-            ["@types/smithy__util-utf8", null],\
-            ["@types/supabase__postgrest-js", null],\
-            ["@types/supabase__supabase-js", null],\
-            ["@types/tensorflow-models__universal-sentence-encoder", null],\
-            ["@types/tensorflow__tfjs-converter", null],\
-            ["@types/tensorflow__tfjs-core", null],\
-            ["@types/typeorm", null],\
-            ["@types/typesense", null],\
-            ["@types/upstash__redis", null],\
-            ["@types/upstash__vector", null],\
-            ["@types/usearch", null],\
-            ["@types/vectordb", null],\
-            ["@types/vercel__kv", null],\
-            ["@types/vercel__postgres", null],\
-            ["@types/voy-search", null],\
-            ["@types/weaviate-ts-client", null],\
-            ["@types/web-auth-library", null],\
-            ["@types/writerai__writer-sdk", null],\
-            ["@types/ws", null],\
-            ["@types/xata.io__client", null],\
-            ["@types/xenova__transformers", null],\
-            ["@types/zilliz__milvus2-sdk-node", null],\
-            ["@upstash/redis", null],\
-            ["@upstash/vector", null],\
-            ["@vercel/kv", null],\
-            ["@vercel/postgres", null],\
-            ["@writerai/writer-sdk", null],\
-            ["@xata.io/client", null],\
-            ["@xenova/transformers", null],\
-            ["@zilliz/milvus2-sdk-node", null],\
-            ["better-sqlite3", null],\
-            ["cassandra-driver", null],\
-            ["chromadb", null],\
-            ["closevector-common", null],\
-            ["closevector-node", null],\
-            ["closevector-web", null],\
-            ["cohere-ai", null],\
-            ["convex", null],\
-            ["discord.js", null],\
-            ["dria", null],\
-            ["faiss-node", null],\
-            ["firebase-admin", null],\
-            ["flat", "npm:5.0.2"],\
-            ["google-auth-library", null],\
-            ["googleapis", null],\
-            ["hnswlib-node", null],\
-            ["html-to-text", null],\
-            ["ioredis", null],\
-            ["jsdom", null],\
-            ["langsmith", "npm:0.1.13"],\
-            ["llmonitor", null],\
-            ["lodash", null],\
-            ["lunary", null],\
-            ["mongodb", null],\
-            ["mysql2", null],\
-            ["neo4j-driver", null],\
-            ["node-llama-cpp", null],\
-            ["pg", null],\
-            ["pg-copy-streams", null],\
-            ["pickleparser", null],\
-            ["portkey-ai", null],\
-            ["redis", null],\
-            ["replicate", null],\
-            ["typeorm", null],\
-            ["typesense", null],\
-            ["usearch", null],\
-            ["uuid", "npm:9.0.1"],\
-            ["vectordb", null],\
-            ["voy-search", null],\
-            ["weaviate-ts-client", null],\
-            ["web-auth-library", null],\
-            ["ws", null],\
-            ["zod", "npm:3.22.4"]\
-          ],\
-          "packagePeers": [\
-            "@aws-crypto/sha256-js",\
-            "@aws-sdk/client-bedrock-agent-runtime",\
-            "@aws-sdk/client-bedrock-runtime",\
-            "@aws-sdk/client-dynamodb",\
-            "@aws-sdk/client-kendra",\
-            "@aws-sdk/client-lambda",\
-            "@aws-sdk/client-sagemaker-runtime",\
-            "@aws-sdk/client-sfn",\
-            "@aws-sdk/credential-provider-node",\
-            "@azure/search-documents",\
-            "@clickhouse/client",\
-            "@cloudflare/ai",\
-            "@datastax/astra-db-ts",\
-            "@elastic/elasticsearch",\
-            "@getmetal/metal-sdk",\
-            "@getzep/zep-js",\
-            "@gomomento/sdk-core",\
-            "@gomomento/sdk",\
-            "@google-ai/generativelanguage",\
-            "@gradientai/nodejs-sdk",\
-            "@huggingface/inference",\
-            "@mozilla/readability",\
-            "@opensearch-project/opensearch",\
-            "@pinecone-database/pinecone",\
-            "@planetscale/database",\
-            "@qdrant/js-client-rest",\
-            "@raycast/api",\
-            "@rockset/client",\
-            "@smithy/eventstream-codec",\
-            "@smithy/protocol-http",\
-            "@smithy/signature-v4",\
-            "@smithy/util-utf8",\
-            "@supabase/postgrest-js",\
-            "@supabase/supabase-js",\
-            "@tensorflow-models/universal-sentence-encoder",\
-            "@tensorflow/tfjs-converter",\
-            "@tensorflow/tfjs-core",\
-            "@types/aws-crypto__sha256-js",\
-            "@types/aws-sdk__client-bedrock-agent-runtime",\
-            "@types/aws-sdk__client-bedrock-runtime",\
-            "@types/aws-sdk__client-dynamodb",\
-            "@types/aws-sdk__client-kendra",\
-            "@types/aws-sdk__client-lambda",\
-            "@types/aws-sdk__client-sagemaker-runtime",\
-            "@types/aws-sdk__client-sfn",\
-            "@types/aws-sdk__credential-provider-node",\
-            "@types/azure__search-documents",\
-            "@types/better-sqlite3",\
-            "@types/cassandra-driver",\
-            "@types/chromadb",\
-            "@types/clickhouse__client",\
-            "@types/closevector-common",\
-            "@types/closevector-node",\
-            "@types/closevector-web",\
-            "@types/cloudflare__ai",\
-            "@types/cohere-ai",\
-            "@types/convex",\
-            "@types/datastax__astra-db-ts",\
-            "@types/discord.js",\
-            "@types/dria",\
-            "@types/elastic__elasticsearch",\
-            "@types/faiss-node",\
-            "@types/firebase-admin",\
-            "@types/getmetal__metal-sdk",\
-            "@types/getzep__zep-js",\
-            "@types/gomomento__sdk-core",\
-            "@types/gomomento__sdk",\
-            "@types/google-ai__generativelanguage",\
-            "@types/google-auth-library",\
-            "@types/googleapis",\
-            "@types/gradientai__nodejs-sdk",\
-            "@types/hnswlib-node",\
-            "@types/html-to-text",\
-            "@types/huggingface__inference",\
-            "@types/ioredis",\
-            "@types/jsdom",\
-            "@types/llmonitor",\
-            "@types/lodash",\
-            "@types/lunary",\
-            "@types/mongodb",\
-            "@types/mozilla__readability",\
-            "@types/mysql2",\
-            "@types/neo4j-driver",\
-            "@types/node-llama-cpp",\
-            "@types/opensearch-project__opensearch",\
-            "@types/pg-copy-streams",\
-            "@types/pg",\
-            "@types/pickleparser",\
-            "@types/pinecone-database__pinecone",\
-            "@types/planetscale__database",\
-            "@types/portkey-ai",\
-            "@types/qdrant__js-client-rest",\
-            "@types/raycast__api",\
-            "@types/redis",\
-            "@types/replicate",\
-            "@types/rockset__client",\
-            "@types/smithy__eventstream-codec",\
-            "@types/smithy__protocol-http",\
-            "@types/smithy__signature-v4",\
-            "@types/smithy__util-utf8",\
-            "@types/supabase__postgrest-js",\
-            "@types/supabase__supabase-js",\
-            "@types/tensorflow-models__universal-sentence-encoder",\
-            "@types/tensorflow__tfjs-converter",\
-            "@types/tensorflow__tfjs-core",\
-            "@types/typeorm",\
-            "@types/typesense",\
-            "@types/upstash__redis",\
-            "@types/upstash__vector",\
-            "@types/usearch",\
-            "@types/vectordb",\
-            "@types/vercel__kv",\
-            "@types/vercel__postgres",\
-            "@types/voy-search",\
-            "@types/weaviate-ts-client",\
-            "@types/web-auth-library",\
-            "@types/writerai__writer-sdk",\
-            "@types/ws",\
-            "@types/xata.io__client",\
-            "@types/xenova__transformers",\
-            "@types/zilliz__milvus2-sdk-node",\
-            "@upstash/redis",\
-            "@upstash/vector",\
-            "@vercel/kv",\
-            "@vercel/postgres",\
-            "@writerai/writer-sdk",\
-            "@xata.io/client",\
-            "@xenova/transformers",\
-            "@zilliz/milvus2-sdk-node",\
-            "better-sqlite3",\
-            "cassandra-driver",\
-            "chromadb",\
-            "closevector-common",\
-            "closevector-node",\
-            "closevector-web",\
-            "cohere-ai",\
-            "convex",\
-            "discord.js",\
-            "dria",\
-            "faiss-node",\
-            "firebase-admin",\
-            "google-auth-library",\
-            "googleapis",\
-            "hnswlib-node",\
-            "html-to-text",\
-            "ioredis",\
-            "jsdom",\
-            "llmonitor",\
-            "lodash",\
-            "lunary",\
-            "mongodb",\
-            "mysql2",\
-            "neo4j-driver",\
-            "node-llama-cpp",\
-            "pg-copy-streams",\
-            "pg",\
-            "pickleparser",\
-            "portkey-ai",\
-            "redis",\
-            "replicate",\
-            "typeorm",\
-            "typesense",\
-            "usearch",\
-            "vectordb",\
-            "voy-search",\
-            "weaviate-ts-client",\
-            "web-auth-library",\
-            "ws"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@langchain/core", [\
         ["npm:0.1.43", {\
           "packageLocation": "./.yarn/cache/@langchain-core-npm-0.1.43-9e50fc4efa-8bff86fa19.zip/node_modules/@langchain/core/",\
@@ -530,6 +152,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["zod-to-json-schema", "virtual:9e50fc4efa1283c35927183f2040c8cdf53cb21b2edca0e4f2f023d7f68c443428e4f1f518e3c9e692e00c3733e9c80390752f0ede7fd51c7018b1e3e4763ee6#npm:3.22.4"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:0.2.36", {\
+          "packageLocation": "./.yarn/cache/@langchain-core-npm-0.2.36-6e77c597ed-963aca44a8.zip/node_modules/@langchain/core/",\
+          "packageDependencies": [\
+            ["@langchain/core", "npm:0.2.36"],\
+            ["ansi-styles", "npm:5.2.0"],\
+            ["camelcase", "npm:6.3.0"],\
+            ["decamelize", "npm:1.2.0"],\
+            ["js-tiktoken", "npm:1.0.15"],\
+            ["langsmith", "virtual:6e77c597ed8d9ace0c1fe8d3b804bf3829e70f011b0911ae95bce9c8703e61e8f2e3dc09afb3b5cf77e3fea7775f95d0144e5bfe5b5ad0cd8dd0ae87e9b054c8#npm:0.1.68"],\
+            ["mustache", "npm:4.2.0"],\
+            ["p-queue", "npm:6.6.2"],\
+            ["p-retry", "npm:4.6.2"],\
+            ["uuid", "npm:10.0.0"],\
+            ["zod", "npm:3.22.4"],\
+            ["zod-to-json-schema", "virtual:9e50fc4efa1283c35927183f2040c8cdf53cb21b2edca0e4f2f023d7f68c443428e4f1f518e3c9e692e00c3733e9c80390752f0ede7fd51c7018b1e3e4763ee6#npm:3.22.4"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@langchain/openai", [\
@@ -542,6 +182,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["openai", "npm:4.28.4"],\
             ["zod", "npm:3.22.4"],\
             ["zod-to-json-schema", "virtual:9e50fc4efa1283c35927183f2040c8cdf53cb21b2edca0e4f2f023d7f68c443428e4f1f518e3c9e692e00c3733e9c80390752f0ede7fd51c7018b1e3e4763ee6#npm:3.22.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.2.11", {\
+          "packageLocation": "./.yarn/cache/@langchain-openai-npm-0.2.11-3c6cf9c06b-afd192901f.zip/node_modules/@langchain/openai/",\
+          "packageDependencies": [\
+            ["@langchain/openai", "npm:0.2.11"],\
+            ["@langchain/core", "npm:0.2.36"],\
+            ["js-tiktoken", "npm:1.0.15"],\
+            ["openai", "virtual:3c6cf9c06b011b1074690fc04bb062ee4030afe65b6a605a302c1cbd86c93bb60627b9f9c75a37fc1583ba4a40ba8fc6508d97df57ad09a2e75faf60d840e8d5#npm:4.68.4"],\
+            ["zod", "npm:3.22.4"],\
+            ["zod-to-json-schema", "virtual:9e50fc4efa1283c35927183f2040c8cdf53cb21b2edca0e4f2f023d7f68c443428e4f1f518e3c9e692e00c3733e9c80390752f0ede7fd51c7018b1e3e4763ee6#npm:3.22.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@langchain/textsplitters", [\
+        ["npm:0.0.3", {\
+          "packageLocation": "./.yarn/cache/@langchain-textsplitters-npm-0.0.3-ee8c3b89b5-f0b32d65c8.zip/node_modules/@langchain/textsplitters/",\
+          "packageDependencies": [\
+            ["@langchain/textsplitters", "npm:0.0.3"],\
+            ["@langchain/core", "npm:0.2.36"],\
+            ["js-tiktoken", "npm:1.0.15"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -670,6 +333,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/uuid", [\
+        ["npm:10.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-uuid-npm-10.0.0-9ac1066765-e3958f8b0f.zip/node_modules/@types/uuid/",\
+          "packageDependencies": [\
+            ["@types/uuid", "npm:10.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:9.0.8", {\
           "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.8-3eeeaa5abb-b8c60b7ba8.zip/node_modules/@types/uuid/",\
           "packageDependencies": [\
@@ -1217,15 +887,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["expr-eval", [\
-        ["npm:2.0.2", {\
-          "packageLocation": "./.yarn/cache/expr-eval-npm-2.0.2-20b6d1f745-01862f09b5.zip/node_modules/expr-eval/",\
-          "packageDependencies": [\
-            ["expr-eval", "npm:2.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["fecha", [\
         ["npm:4.2.3", {\
           "packageLocation": "./.yarn/cache/fecha-npm-4.2.3-75248da3fd-f94e2fb3ac.zip/node_modules/fecha/",\
@@ -1241,15 +902,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["fill-range", "npm:7.0.1"],\
             ["to-regex-range", "npm:5.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["flat", [\
-        ["npm:5.0.2", {\
-          "packageLocation": "./.yarn/cache/flat-npm-5.0.2-12748102a5-12a1536ac7.zip/node_modules/flat/",\
-          "packageDependencies": [\
-            ["flat", "npm:5.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1503,6 +1155,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["base64-js", "npm:1.5.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.0.15", {\
+          "packageLocation": "./.yarn/cache/js-tiktoken-npm-1.0.15-57ad6f0d88-fb37641fcb.zip/node_modules/js-tiktoken/",\
+          "packageDependencies": [\
+            ["js-tiktoken", "npm:1.0.15"],\
+            ["base64-js", "npm:1.5.1"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["js-tokens", [\
@@ -1543,31 +1203,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["langchain", [\
-        ["npm:0.1.25", {\
-          "packageLocation": "./.yarn/cache/langchain-npm-0.1.25-41ca5a4340-50a85c3f31.zip/node_modules/langchain/",\
+        ["npm:0.2.20", {\
+          "packageLocation": "./.yarn/cache/langchain-npm-0.2.20-f583bc6092-3eeb070ac1.zip/node_modules/langchain/",\
           "packageDependencies": [\
-            ["langchain", "npm:0.1.25"]\
+            ["langchain", "npm:0.2.20"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.1.25", {\
-          "packageLocation": "./.yarn/__virtual__/langchain-virtual-fd5518af93/0/cache/langchain-npm-0.1.25-41ca5a4340-50a85c3f31.zip/node_modules/langchain/",\
+        ["virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.2.20", {\
+          "packageLocation": "./.yarn/__virtual__/langchain-virtual-71fe739f01/0/cache/langchain-npm-0.2.20-f583bc6092-3eeb070ac1.zip/node_modules/langchain/",\
           "packageDependencies": [\
-            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.1.25"],\
-            ["@anthropic-ai/sdk", "npm:0.9.1"],\
+            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.2.20"],\
             ["@aws-sdk/client-s3", null],\
             ["@aws-sdk/client-sagemaker-runtime", null],\
             ["@aws-sdk/client-sfn", null],\
             ["@aws-sdk/credential-provider-node", null],\
             ["@azure/storage-blob", null],\
+            ["@browserbasehq/sdk", null],\
             ["@gomomento/sdk", null],\
             ["@gomomento/sdk-core", null],\
             ["@gomomento/sdk-web", null],\
-            ["@google-ai/generativelanguage", null],\
-            ["@google-cloud/storage", null],\
-            ["@langchain/community", "virtual:fd5518af93e01708abad64cb59f6795aa027aea67e646a1930dcdfd5cdb8bc7ef3d4a1f85dd1c9ee29e3dd87ee9c2a3fce3f4815038027363f7b1c41b696f4c9#npm:0.0.35"],\
-            ["@langchain/core", "npm:0.1.43"],\
-            ["@langchain/openai", "npm:0.0.18"],\
+            ["@langchain/anthropic", null],\
+            ["@langchain/aws", null],\
+            ["@langchain/cohere", null],\
+            ["@langchain/core", "npm:0.2.36"],\
+            ["@langchain/google-genai", null],\
+            ["@langchain/google-vertexai", null],\
+            ["@langchain/groq", null],\
+            ["@langchain/mistralai", null],\
+            ["@langchain/ollama", null],\
+            ["@langchain/openai", "npm:0.2.11"],\
+            ["@langchain/textsplitters", "npm:0.0.3"],\
+            ["@mendable/firecrawl-js", null],\
             ["@notionhq/client", null],\
             ["@pinecone-database/pinecone", null],\
             ["@supabase/supabase-js", null],\
@@ -1579,6 +1246,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/aws-sdk__credential-provider-node", null],\
             ["@types/axios", null],\
             ["@types/azure__storage-blob", null],\
+            ["@types/browserbasehq__sdk", null],\
             ["@types/cheerio", null],\
             ["@types/chromadb", null],\
             ["@types/convex", null],\
@@ -1590,15 +1258,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/gomomento__sdk", null],\
             ["@types/gomomento__sdk-core", null],\
             ["@types/gomomento__sdk-web", null],\
-            ["@types/google-ai__generativelanguage", null],\
-            ["@types/google-auth-library", null],\
-            ["@types/google-cloud__storage", null],\
             ["@types/handlebars", null],\
             ["@types/html-to-text", null],\
             ["@types/ignore", null],\
             ["@types/ioredis", null],\
             ["@types/jsdom", null],\
+            ["@types/langchain__anthropic", null],\
+            ["@types/langchain__aws", null],\
+            ["@types/langchain__cohere", null],\
+            ["@types/langchain__google-genai", null],\
+            ["@types/langchain__google-vertexai", null],\
+            ["@types/langchain__groq", null],\
+            ["@types/langchain__mistralai", null],\
+            ["@types/langchain__ollama", null],\
             ["@types/mammoth", null],\
+            ["@types/mendable__firecrawl-js", null],\
             ["@types/mongodb", null],\
             ["@types/node-llama-cpp", null],\
             ["@types/notion-to-md", null],\
@@ -1634,22 +1308,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["couchbase", null],\
             ["d3-dsv", null],\
             ["epub2", null],\
-            ["expr-eval", "npm:2.0.2"],\
             ["faiss-node", null],\
             ["fast-xml-parser", null],\
-            ["google-auth-library", null],\
             ["handlebars", null],\
             ["html-to-text", null],\
             ["ignore", null],\
             ["ioredis", null],\
-            ["js-tiktoken", "npm:1.0.10"],\
+            ["js-tiktoken", "npm:1.0.15"],\
             ["js-yaml", "npm:4.1.0"],\
             ["jsdom", null],\
             ["jsonpointer", "npm:5.0.1"],\
-            ["langchainhub", "npm:0.0.8"],\
-            ["langsmith", "npm:0.1.13"],\
+            ["langsmith", "virtual:6e77c597ed8d9ace0c1fe8d3b804bf3829e70f011b0911ae95bce9c8703e61e8f2e3dc09afb3b5cf77e3fea7775f95d0144e5bfe5b5ad0cd8dd0ae87e9b054c8#npm:0.1.68"],\
             ["mammoth", null],\
-            ["ml-distance", "npm:4.0.1"],\
             ["mongodb", null],\
             ["node-llama-cpp", null],\
             ["notion-to-md", null],\
@@ -1665,7 +1335,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["sonix-speech-recognition", null],\
             ["srt-parser-2", null],\
             ["typeorm", null],\
-            ["uuid", "npm:9.0.1"],\
+            ["uuid", "npm:10.0.0"],\
             ["weaviate-ts-client", null],\
             ["web-auth-library", null],\
             ["ws", null],\
@@ -1681,11 +1351,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@aws-sdk/client-sfn",\
             "@aws-sdk/credential-provider-node",\
             "@azure/storage-blob",\
+            "@browserbasehq/sdk",\
             "@gomomento/sdk-core",\
             "@gomomento/sdk-web",\
             "@gomomento/sdk",\
-            "@google-ai/generativelanguage",\
-            "@google-cloud/storage",\
+            "@langchain/anthropic",\
+            "@langchain/aws",\
+            "@langchain/cohere",\
+            "@langchain/google-genai",\
+            "@langchain/google-vertexai",\
+            "@langchain/groq",\
+            "@langchain/mistralai",\
+            "@langchain/ollama",\
+            "@mendable/firecrawl-js",\
             "@notionhq/client",\
             "@pinecone-database/pinecone",\
             "@supabase/supabase-js",\
@@ -1697,6 +1375,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/aws-sdk__credential-provider-node",\
             "@types/axios",\
             "@types/azure__storage-blob",\
+            "@types/browserbasehq__sdk",\
             "@types/cheerio",\
             "@types/chromadb",\
             "@types/convex",\
@@ -1708,15 +1387,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/gomomento__sdk-core",\
             "@types/gomomento__sdk-web",\
             "@types/gomomento__sdk",\
-            "@types/google-ai__generativelanguage",\
-            "@types/google-auth-library",\
-            "@types/google-cloud__storage",\
             "@types/handlebars",\
             "@types/html-to-text",\
             "@types/ignore",\
             "@types/ioredis",\
             "@types/jsdom",\
+            "@types/langchain__anthropic",\
+            "@types/langchain__aws",\
+            "@types/langchain__cohere",\
+            "@types/langchain__google-genai",\
+            "@types/langchain__google-vertexai",\
+            "@types/langchain__groq",\
+            "@types/langchain__mistralai",\
+            "@types/langchain__ollama",\
             "@types/mammoth",\
+            "@types/mendable__firecrawl-js",\
             "@types/mongodb",\
             "@types/node-llama-cpp",\
             "@types/notion-to-md",\
@@ -1753,7 +1438,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "epub2",\
             "faiss-node",\
             "fast-xml-parser",\
-            "google-auth-library",\
             "handlebars",\
             "html-to-text",\
             "ignore",\
@@ -1782,15 +1466,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["langchainhub", [\
-        ["npm:0.0.8", {\
-          "packageLocation": "./.yarn/cache/langchainhub-npm-0.0.8-769ba89373-b46316adbb.zip/node_modules/langchainhub/",\
-          "packageDependencies": [\
-            ["langchainhub", "npm:0.0.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["langsmith", [\
         ["npm:0.1.13", {\
           "packageLocation": "./.yarn/cache/langsmith-npm-0.1.13-2a34eac768-a049959a4f.zip/node_modules/langsmith/",\
@@ -1801,6 +1476,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["p-queue", "npm:6.6.2"],\
             ["p-retry", "npm:4.6.2"],\
             ["uuid", "npm:9.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.1.68", {\
+          "packageLocation": "./.yarn/cache/langsmith-npm-0.1.68-f735c37596-b5422f9d52.zip/node_modules/langsmith/",\
+          "packageDependencies": [\
+            ["langsmith", "npm:0.1.68"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:6e77c597ed8d9ace0c1fe8d3b804bf3829e70f011b0911ae95bce9c8703e61e8f2e3dc09afb3b5cf77e3fea7775f95d0144e5bfe5b5ad0cd8dd0ae87e9b054c8#npm:0.1.68", {\
+          "packageLocation": "./.yarn/__virtual__/langsmith-virtual-669947a9f9/0/cache/langsmith-npm-0.1.68-f735c37596-b5422f9d52.zip/node_modules/langsmith/",\
+          "packageDependencies": [\
+            ["langsmith", "virtual:6e77c597ed8d9ace0c1fe8d3b804bf3829e70f011b0911ae95bce9c8703e61e8f2e3dc09afb3b5cf77e3fea7775f95d0144e5bfe5b5ad0cd8dd0ae87e9b054c8#npm:0.1.68"],\
+            ["@types/openai", null],\
+            ["@types/uuid", "npm:10.0.0"],\
+            ["commander", "npm:10.0.1"],\
+            ["openai", null],\
+            ["p-queue", "npm:6.6.2"],\
+            ["p-retry", "npm:4.6.2"],\
+            ["semver", "npm:7.6.3"],\
+            ["uuid", "npm:10.0.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/openai",\
+            "openai"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2035,6 +1736,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mustache", [\
+        ["npm:4.2.0", {\
+          "packageLocation": "./.yarn/cache/mustache-npm-4.2.0-1fe3d6d77a-928fcb63e3.zip/node_modules/mustache/",\
+          "packageDependencies": [\
+            ["mustache", "npm:4.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["node-domexception", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/node-domexception-npm-1.0.0-e1e813b76f-ee1d37dd2a.zip/node_modules/node-domexception/",\
@@ -2128,6 +1838,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["formdata-node", "npm:4.4.1"],\
             ["node-fetch", "virtual:3c17cf502be0c7c82b6287e023d783515ca6fa134646c9721142f96ed2c8f7ad52e36876ac623cabb40ce5d95bd9324fc68db55199c1a84d4dfcacce6cce8330#npm:2.7.0"],\
             ["web-streams-polyfill", "npm:3.3.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.68.4", {\
+          "packageLocation": "./.yarn/cache/openai-npm-4.68.4-ee1bc728a6-7a17a5f51e.zip/node_modules/openai/",\
+          "packageDependencies": [\
+            ["openai", "npm:4.68.4"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:3c6cf9c06b011b1074690fc04bb062ee4030afe65b6a605a302c1cbd86c93bb60627b9f9c75a37fc1583ba4a40ba8fc6508d97df57ad09a2e75faf60d840e8d5#npm:4.68.4", {\
+          "packageLocation": "./.yarn/__virtual__/openai-virtual-475d3c9255/0/cache/openai-npm-4.68.4-ee1bc728a6-7a17a5f51e.zip/node_modules/openai/",\
+          "packageDependencies": [\
+            ["openai", "virtual:3c6cf9c06b011b1074690fc04bb062ee4030afe65b6a605a302c1cbd86c93bb60627b9f9c75a37fc1583ba4a40ba8fc6508d97df57ad09a2e75faf60d840e8d5#npm:4.68.4"],\
+            ["@types/node", "npm:18.19.22"],\
+            ["@types/node-fetch", "npm:2.6.11"],\
+            ["@types/zod", null],\
+            ["abort-controller", "npm:3.0.0"],\
+            ["agentkeepalive", "npm:4.5.0"],\
+            ["form-data-encoder", "npm:1.7.2"],\
+            ["formdata-node", "npm:4.4.1"],\
+            ["node-fetch", "virtual:3c17cf502be0c7c82b6287e023d783515ca6fa134646c9721142f96ed2c8f7ad52e36876ac623cabb40ce5d95bd9324fc68db55199c1a84d4dfcacce6cce8330#npm:2.7.0"],\
+            ["zod", "npm:3.22.4"]\
+          ],\
+          "packagePeers": [\
+            "@types/zod",\
+            "zod"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2313,6 +2050,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:7.6.3", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.6.3-57e82c14d5-4110ec5d01.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.6.3"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["shebang-command", [\
@@ -2470,7 +2214,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/semver", "npm:7.5.8"],\
             ["commander", "npm:11.1.0"],\
             ["dotenv", "npm:16.4.5"],\
-            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.1.25"],\
+            ["langchain", "virtual:1b19526dbdd9326d7be3a8715031433b496020c0b89d99f46ee7cabdc73bd43b3c8d557ba16a105ff4326214fb4ed875b9445d3d9f103b265320d799349c4112#npm:0.2.20"],\
             ["lint-staged", "npm:13.3.0"],\
             ["prettier", "npm:2.8.8"],\
             ["semver", "npm:7.6.0"],\
@@ -2625,6 +2369,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["uuid", [\
+        ["npm:10.0.0", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-10.0.0-4872b46ff8-4b81611ade.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:10.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:9.0.1", {\
           "packageLocation": "./.yarn/cache/uuid-npm-9.0.1-39a8442bc6-39931f6da7.zip/node_modules/uuid/",\
           "packageDependencies": [\

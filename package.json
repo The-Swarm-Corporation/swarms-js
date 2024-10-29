@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@langchain/openai": "^0.0.18",
-    "langchain": "^0.1.25",
+    "langchain": "^0.2.19",
     "swarms-js": "^0.0.3",
     "turbo": "latest",
     "winston": "^3.12.0"
