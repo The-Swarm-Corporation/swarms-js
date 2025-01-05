@@ -1,0 +1,155 @@
+import { AgentRegistry } from '../swarms/structs/agent_registry.mjs';
+import { Agent } from '../swarms/agent.mjs';
+import { initializeLogger } from '../swarms/utils/loguru_logger.mjs';
+
+jest.mock('../swarms/utils/loguru_logger.mjs', () => {
+  return {
+    initializeLogger: jest.fn().mockReturnValue({
+      info: jest.fn(),
+      error: jest.fn(),
+    }),
+  };
+});
+
+const logger = initializeLogger();
+
+describe('AgentRegistry', () => {
+  let registry;
+  let agent;
+
+  beforeEach(() => {
+    registry = new AgentRegistry();
+    agent = new Agent({
+      agentName: 'test-agent',
+      description: 'A test agent',
+    });
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  describe('add', () => {
+    test('should add a new agent to the registry', async () => {
+      await registry.add(agent);
+      expect(registry.get('test-agent')).toBe(agent);
+      expect(logger.info).toHaveBeenCalledWith('Agent test-agent added successfully.');
+    });
+
+    test('should throw an error if agent name already exists', async () => {
+      await registry.add(agent);
+      await expect(registry.add(agent)).rejects.toThrow('Agent with name test-agent already exists.');
+      expect(logger.error).toHaveBeenCalledWith('Agent with name test-agent already exists.');
+    });
+  });
+
+  describe('addMany', () => {
+    test('should add multiple agents to the registry', async () => {
+      const agent2 = new Agent({
+        agentName: 'test-agent-2',
+        description: 'Another test agent',
+      });
+      await registry.addMany([agent, agent2]);
+      expect(registry.get('test-agent')).toBe(agent);
+      expect(registry.get('test-agent-2')).toBe(agent2);
+    });
+  });
+
+  describe('delete', () => {
+    test('should delete an agent from the registry', async () => {
+      await registry.add(agent);
+      registry.delete('test-agent');
+      expect(() => registry.get('test-agent')).toThrow('Agent test-agent not found');
+      expect(logger.info).toHaveBeenCalledWith('Agent test-agent deleted successfully.');
+    });
+
+    test('should throw an error if agent not found', () => {
+      expect(() => registry.delete('non-existent-agent')).toThrow('Agent non-existent-agent not found');
+      expect(logger.error).toHaveBeenCalledWith('Error: Agent non-existent-agent not found');
+    });
+  });
+
+  describe('updateAgent', () => {
+    test('should update an existing agent', async () => {
+      await registry.add(agent);
+      const newAgent = new Agent({
+        agentName: 'test-agent',
+        description: 'Updated description',
+      });
+      registry.updateAgent('test-agent', newAgent);
+      expect(registry.get('test-agent')).toBe(newAgent);
+      expect(logger.info).toHaveBeenCalledWith('Agent test-agent updated successfully.');
+    });
+
+    test('should throw an error if agent does not exist', () => {
+      const newAgent = new Agent({
+        agentName: 'test-agent',
+        description: 'Updated description',
+      });
+      expect(() => registry.updateAgent('non-existent-agent', newAgent)).toThrow('Agent with name non-existent-agent does not exist.');
+      expect(logger.error).toHaveBeenCalledWith('Agent with name non-existent-agent does not exist.');
+    });
+  });
+
+  describe('get', () => {
+    test('should retrieve an agent from the registry', async () => {
+      await registry.add(agent);
+      const retrievedAgent = registry.get('test-agent');
+      expect(retrievedAgent).toBe(agent);
+      expect(logger.info).toHaveBeenCalledWith('Agent test-agent retrieved successfully.');
+    });
+
+    test('should throw an error if agent not found', () => {
+      expect(() => registry.get('non-existent-agent')).toThrow('Agent non-existent-agent not found');
+      expect(logger.error).toHaveBeenCalledWith('Error: Agent non-existent-agent not found');
+    });
+  });
+
+  describe('listAgents', () => {
+    test('should list all agent names', async () => {
+      await registry.add(agent);
+      const agentNames = registry.listAgents();
+      expect(agentNames).toEqual(['test-agent']);
+      expect(logger.info).toHaveBeenCalledWith('Listing all agents.');
+    });
+  });
+
+  describe('returnAllAgents', () => {
+    test('should return all agents', async () => {
+      await registry.add(agent);
+      const agents = registry.returnAllAgents();
+      expect(agents).toEqual([agent]);
+      expect(logger.info).toHaveBeenCalledWith('Returning all agents.');
+    });
+  });
+
+  describe('query', () => {
+    test('should query agents based on a condition', async () => {
+      await registry.add(agent);
+      const matchingAgents = registry.query(a => a.description.includes('test'));
+      expect(matchingAgents).toEqual([agent]);
+      expect(logger.info).toHaveBeenCalledWith('Querying agents with condition.');
+    });
+
+    test('should return all agents if no condition is provided', async () => {
+      await registry.add(agent);
+      const allAgents = registry.query();
+      expect(allAgents).toEqual([agent]);
+      expect(logger.info).toHaveBeenCalledWith('Querying agents with condition.');
+    });
+  });
+
+  describe('findAgentByName', () => {
+    test('should find an agent by name', async () => {
+      await registry.add(agent);
+      const foundAgent = await registry.findAgentByName('test-agent');
+      expect(foundAgent).toBe(agent);
+      expect(logger.info).toHaveBeenCalledWith('Agent test-agent retrieved successfully.');
+    });
+
+    test('should throw an error if agent not found', async () => {
+      await expect(registry.findAgentByName('non-existent-agent')).rejects.toThrow('Agent non-existent-agent not found');
+      expect(logger.error).toHaveBeenCalledWith('Error: Agent non-existent-agent not found');
+    });
+  });
+});

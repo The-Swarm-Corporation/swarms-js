@@ -4,14 +4,10 @@
   "engines": {
     "node": ">=18"
   },
-  "workspaces": [
-    "."
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kyegomez/swarms-js"
   },
-  "packageManager": "yarn@3.4.1",
   "scripts": {
     "build": "turbo run build --filter=\"!test-exports-*\" --concurrency 1",
     "turbo:command": "turbo",
@@ -21,36 +17,58 @@
     "lint:fix": "turbo run lint:fix",
     "test:unit": "turbo run test",
     "test:unit:ci": "turbo run test:ci",
-    "test:int": "yarn run test:int:deps && turbo run test:integration ; yarn run test:int:deps:down",
+    "test:int": "npm run test:int:deps && turbo run test:integration ; npm run test:int:deps:down",
     "test:int:deps": "docker compose -f test-int-deps-docker-compose.yml up -d",
     "test:int:deps:down": "docker compose -f test-int-deps-docker-compose.yml down",
     "test:ranges:docker": "docker compose -f dependency_range_tests/docker-compose.yml up --force-recreate",
     "test:exports:docker": "docker compose -f environment_tests/docker-compose.yml up --force-recreate",
-    "example": "yarn workspace examples start",
+    "example": "npm run workspace examples start",
     "precommit": "turbo run precommit",
-    "docs": "yarn workspace core_docs start",
-    "docs:api_refs": "yarn workspace api_refs start",
-    "release": "node release_workspace.js --workspace"
+    "docs": "npm run workspace core_docs start",
+    "docs:api_refs": "npm run workspace api_refs start",
+    "release": "node release_workspace.js --workspace",
+    "test": "jest --config jest.config.js"
   },
   "author": "Swarms",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@tsconfig/recommended": "^1.0.2",
     "@types/jest": "^29.5.3",
     "@types/semver": "^7",
+    "babel-jest": "^29.7.0",
     "commander": "^11.1.0",
     "dotenv": "^16.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
     "lint-staged": "^13.1.1",
     "prettier": "^2.8.3",
     "semver": "^7.5.4",
     "typescript": "~5.1.6"
   },
   "dependencies": {
+    "@iarna/toml": "^2.2.5",
     "@langchain/openai": "^0.0.18",
+    "chalk": "^5.4.1",
+    "chromadb": "latest",
+    "console": "^0.7.2",
+    "dotenv": "latest",
+    "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
     "langchain": "^0.1.25",
+    "loguru": "^0.0.1-security",
+    "nprogress": "^0.2.0",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "rich": "^0.0.0",
     "swarms-js": "^0.0.3",
+    "tiktoken": "^1.0.18",
+    "toml": "^3.0.0",
     "turbo": "latest",
-    "winston": "^3.12.0"
+    "uuid": "^11.0.3",
+    "winston": "^3.12.0",
+    "yaml": "latest"
   },
   "resolutions": {
     "dpdm@^3.12.0": "patch:dpdm@npm%3A3.12.0#./.yarn/patches/dpdm-npm-3.12.0-0dfdd8e3b8.patch",
@@ -63,5 +81,6 @@
       "eslint --cache --fix"
     ],
     "*.md": "prettier --config .prettierrc --write"
-  }
+  },
+  "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb"
 }
