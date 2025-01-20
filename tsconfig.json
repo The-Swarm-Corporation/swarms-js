@@ -1,0 +1,75 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript
+    "target": "ES2022",
+    
+    // Use Node.js module resolution
+    "module": "Node16",
+    "moduleResolution": "node16",
+    
+    // Enable strict type checking
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    
+    // Module emission and resolution
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    
+    // Enhanced type checking
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    
+    // Emit configuration
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": false,
+    
+    // Type declaration settings
+    "types": ["node", "jest"],
+    
+    // Modern JavaScript features
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    
+    // Path aliases and base URLs
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+    
+    // Ensure consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+    
+    // Prevent accidental JSX in non-TSX files
+    "jsx": "react",
+    
+    // Enable importing helper functions from tslib
+    "importHelpers": true
+  },
+  "include": [
+    "src/**/*",
+    "swarms/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
+}

@@ -69,14 +69,17 @@ export interface AgentLog {
   duration: number;
 }
 
+/** Represents the complete conversation history metrics */
+export interface ConversationHistoryMetrics {
+  totalDuration: number;
+  averageResponseTime: number;
+  totalTasks: number;
+}
+
 /** Represents the complete conversation history */
 export interface ConversationHistory {
   history: AgentLog[];
-  metrics: {
-    totalDuration: number;
-    averageResponseTime: number;
-    totalTasks: number;
-  };
+  metrics: ConversationHistoryMetrics;
 }
 
 /**
@@ -84,7 +87,7 @@ export interface ConversationHistory {
  * and efficient memory management
  */
 class Conversation {
-  private readonly logs: AgentLog[];
+  private logs: AgentLog[];
   private capacity: number;
   private size: number;
   private totalDuration: number = 0;
@@ -141,7 +144,7 @@ class Conversation {
   private resize(): void {
     logger.debug(`Resizing conversation buffer from ${this.capacity} to ${this.capacity * 2}`);
     this.capacity *= 2;
-    const newLogs = new Array(this.capacity);
+    const newLogs: any = new Array<AgentLog>(this.capacity);
     for (let i = 0; i < this.size; i++) {
       newLogs[i] = this.logs[i];
     }
@@ -257,6 +260,10 @@ export async function starSwarm(
     const conversation = new Conversation(tasks.length * flatAgents.length);
     const responses: string[] = [];
     const [centerAgent, ...otherAgents] = flatAgents;
+    
+    if (!centerAgent) {
+      throw new Error("Center agent cannot be undefined.");
+    }
 
     logger.info({ 
       centerAgent: centerAgent.agentName,
@@ -460,5 +467,4 @@ export async function broadcast(
   }, 'broadcast');
 }
 
-// Export types for external use
-export type { ConversationHistory, AgentLog };
+export type { ConversationHistoryMetrics, ConversationHistory, AgentLog };

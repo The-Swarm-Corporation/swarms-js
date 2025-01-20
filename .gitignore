@@ -1,0 +1,54 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# NPM package lock
+package-lock.json
+
+# Yarn lock file
+yarn.lock
+
+# Optional npm cache directory
+.npm/
+
+# TypeScript declaration files
+*.d.ts
+
+# Ignore test files if not needed in production
+**/*.spec.ts
+**/*.test.ts

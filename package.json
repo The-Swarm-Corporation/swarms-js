@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kyegomez/swarms-js"
+    "url": "https://github.com/the-swarm-corporation/swarms-js"
   },
   "packageManager": "yarn@3.4.1",
   "scripts": {
@@ -46,9 +46,7 @@
     "typescript": "~5.1.6"
   },
   "dependencies": {
-    "@langchain/openai": "^0.0.18",
-    "langchain": "^0.1.25",
-    "swarms-js": "^0.0.3",
+    "pino": "^9.6.0",
     "turbo": "latest",
     "winston": "^3.12.0"
   },
